@@ -1,1 +1,39 @@
-my midterm exam
+ 1. What is the primary key operational difference between git fetch and git pull?
+
+ git fetch downloads changes from the remote repository without merging them into the current branch. git pull downloads and integrates those changes into the   current branch.
+
+2.You have uncommitted changes and need to temporarily switch branches. Which workflow prevents file loss?
+
+  Use git stash to temporarily save the changes, switch branches, then use git stash pop to restore them.
+
+3.When executing git merge --no-ff, what behavior is enforced by Git?
+
+ It creates a merge commit even when a fast-forward merge is possible.
+
+4.What happens when you check out a specific commit hash instead of a branch name?
+
+ Git enters a detached HEAD state, meaning HEAD points directly to a commit rather than a branch.
+
+5.How do you apply a specific bug-fix commit from a development branch to a stable release branch without merging the entire branch history?
+
+ Use git cherry-pick COMMIT_HASH.
+
+6.After git reset --hard, how can you find recent commits that are no longer referenced by a branch?
+
+  Use git reflog to find previous HEAD positions and recover a commit if it is still available.
+
+7.Which command removes untracked files and directories, including ignored files listed in .gitignore?
+
+  Use git clean -fdx. Be careful: this permanently removes matching untracked files and directories.
+
+8.how can you undo a public commit already pushed to a shared remote without rewriting history?
+
+  Use git revert COMMIT_HASH. It creates a new commit that reverses the changes.
+
+9.Which Git utility uses binary search to identify the commit that introduced a regression?
+
+ Use git bisect.
+
+10.What is the function of the --amend flag with git commit?
+
+ git commit --amend modifies the most recent commit, allowing you to update its message or include staged changes.
